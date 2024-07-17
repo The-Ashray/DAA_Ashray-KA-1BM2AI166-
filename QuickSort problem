@@ -1,0 +1,24 @@
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+def quickSort(arr):
+    pivot = arr[0]  
+    left = [x for x in arr if x < pivot]  
+    equal = [x for x in arr if x == pivot]  
+    right = [x for x in arr if x > pivot]  
+
+    return left + equal + right
+
+if __name__ == "__main__":
+    n = int(input())
+    arr = list(map(int, input().split()))
+
+    result = quickSort(arr)
+
+    print(" ".join(map(str, result)))
